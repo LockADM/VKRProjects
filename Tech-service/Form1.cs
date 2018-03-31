@@ -37,6 +37,13 @@ namespace Tech_service
                 MessageBox.Show("Уникальные поля должны быть заполнены!");
             }
         }
+        private void RDVGError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            if (e.Exception != null && e.Context == DataGridViewDataErrorContexts.Commit)
+            {
+                MessageBox.Show("Данный вид работы уже выбран в данном заказе!");
+            }
+        }
         //Обработчка события "Загрузка основной формы"
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -172,6 +179,7 @@ namespace Tech_service
         {
             if (autorizationFlag == true)
             {
+                this.rabotaDataGridView.DataError += new DataGridViewDataErrorEventHandler(RDVGError);
                 this.ZakazDGV.DataError +=
                             new DataGridViewDataErrorEventHandler(ZakazDGV_DataError);
                 this.vid_RabTableAdapter.Fill(this.techDS.Vid_Rab);

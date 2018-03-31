@@ -16,6 +16,7 @@ namespace Tech_service
         {
             InitializeComponent();
         }
+        AddClientsForm addclientforml;
 
         private void clientyBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -97,6 +98,12 @@ namespace Tech_service
 
             ExcelApp.Visible = true;
             ExcelApp.UserControl = true;
+        }
+
+        private void AddClientsBttn_Click(object sender, EventArgs e)
+        {
+            addclientforml = new AddClientsForm();
+            addclientforml.ShowDialog();
         }
     }
 }

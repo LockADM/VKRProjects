@@ -106,6 +106,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClientsForm.Designer.cs">
+      <DependentUpon>AddClientsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AutorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,11 +145,17 @@
     <Compile Include="RegistrUserForm.Designer.cs">
       <DependentUpon>RegistrUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TechDS.cs">
+      <DependentUpon>TechDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TechDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TechDS.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddClientsForm.resx">
+      <DependentUpon>AddClientsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AutorizationForm.resx">
       <DependentUpon>AutorizationForm.cs</DependentUpon>
     </EmbeddedResource>
