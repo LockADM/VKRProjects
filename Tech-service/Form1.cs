@@ -242,5 +242,12 @@ namespace Tech_service
             ExcelApp.Visible = true;
             ExcelApp.UserControl = true;
         }
+
+        private void StatusBttn_Click(object sender, EventArgs e)
+        {
+            ZakazDGV.CurrentRow.Cells[4].Value = true;
+            zakazBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(techDS);
+        }
     }
 }

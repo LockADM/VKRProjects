@@ -37,7 +37,7 @@ namespace Tech_service
         private void button1_Click(object sender, EventArgs e)
         {
             countOfClients = Convert.ToInt32(this.clientyTableAdapter.ScalarQuery());
-            this.clientyTableAdapter.Insert(countOfClients + 1, fIOTextBox.Text, data_RozdeniyaDateTimePicker.Value.Date, telefon1TextBox.Text, telefon2TextBox.Text, comboBox1.SelectedItem.ToString());
+            this.clientyTableAdapter.Insert(countOfClients + 1, fIOTextBox.Text, data_RozdeniyaDateTimePicker.Value.Date, telefon1TextBox.Text, telefon2TextBox.Text, (string)comboBox1.SelectedItem);
         }
 
         private void button2_Click(object sender, EventArgs e)

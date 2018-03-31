@@ -105,5 +105,23 @@ namespace Tech_service
             addclientforml = new AddClientsForm();
             addclientforml.ShowDialog();
         }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            List<int> rowsVector = new List<int>();
+            for (int i = 1; i < clientyDataGridView.Rows.Count; i++)
+            {
+                if ((string)clientyDataGridView.Rows[i].Cells[1].Value == (string)clientyDataGridView.Rows[i - 1].Cells[1].Value)
+                {
+                    if (Convert.ToDateTime(clientyDataGridView.Rows[i].Cells[2].Value) == Convert.ToDateTime(clientyDataGridView.Rows[i - 1].Cells[2].Value))
+                    {
+                        this.clientyTableAdapter.DeleteQuery((int)clientyDataGridView.Rows[i].Cells[0].Value);
+                       
+
+                    }
+                }
+               
+            }
+        }
     }
 }
