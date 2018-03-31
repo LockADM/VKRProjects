@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrUserForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CommentaryTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.EntrBttn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.LoginTextBox = new System.Windows.Forms.TextBox();
-            this.CommentaryTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.techDS = new Tech_service.TechDS();
             this.autorizationTableTableAdapter = new Tech_service.TechDSTableAdapters.AutorizationTableTableAdapter();
@@ -65,6 +65,23 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Регистрация";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 150);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 17);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Комментарий:";
+            // 
+            // CommentaryTextBox
+            // 
+            this.CommentaryTextBox.Location = new System.Drawing.Point(6, 170);
+            this.CommentaryTextBox.Multiline = true;
+            this.CommentaryTextBox.Name = "CommentaryTextBox";
+            this.CommentaryTextBox.Size = new System.Drawing.Size(207, 33);
+            this.CommentaryTextBox.TabIndex = 2;
             // 
             // label2
             // 
@@ -100,7 +117,7 @@
             this.ExitBtn.Location = new System.Drawing.Point(6, 209);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(89, 31);
-            this.ExitBtn.TabIndex = 2;
+            this.ExitBtn.TabIndex = 4;
             this.ExitBtn.UseVisualStyleBackColor = true;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
@@ -120,23 +137,6 @@
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.Size = new System.Drawing.Size(207, 33);
             this.LoginTextBox.TabIndex = 0;
-            // 
-            // CommentaryTextBox
-            // 
-            this.CommentaryTextBox.Location = new System.Drawing.Point(6, 170);
-            this.CommentaryTextBox.Multiline = true;
-            this.CommentaryTextBox.Name = "CommentaryTextBox";
-            this.CommentaryTextBox.Size = new System.Drawing.Size(207, 33);
-            this.CommentaryTextBox.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 17);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Комментарий:";
             // 
             // bindingSource1
             // 
@@ -169,6 +169,7 @@
             this.ClientSize = new System.Drawing.Size(248, 291);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistrUserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrUserForm";

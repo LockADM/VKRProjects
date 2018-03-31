@@ -16,7 +16,14 @@ namespace Tech_service
         {
             InitializeComponent();
         }
+        private void VidRabotyError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            if (e.Exception != null && e.Context == DataGridViewDataErrorContexts.Commit)
+            {
+                vid_RabDataGridView.CurrentRow.Cells[1].Value = 0;
 
+            }
+        }
         private void vid_RabBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -28,6 +35,7 @@ namespace Tech_service
         private void PriceListForm_Load(object sender, EventArgs e)
         {
             this.vid_RabTableAdapter.Fill(this.techDS.Vid_Rab);
+            this.vid_RabDataGridView.DataError += new DataGridViewDataErrorEventHandler(VidRabotyError);
         }
 
         private void PriceListForm_FormClosing(object sender, FormClosingEventArgs e)
