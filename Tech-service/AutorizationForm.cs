@@ -51,5 +51,31 @@ namespace Tech_service
             else { MessageBox.Show("Идентификатор/Пароль неверны!"); }
             
         }
+
+        private void LoginTextBox_Click(object sender, EventArgs e)
+        {
+            LoginTextBox.Text = null;
+        }
+
+        private void PasswordTextBox_Click(object sender, EventArgs e)
+        {
+            PasswordTextBox.Text = null;
+        }
+
+        private void LoginTextBox_Leave(object sender, EventArgs e)
+        {
+            if (LoginTextBox.Text == null)
+            {
+                LoginTextBox.Text = "Идентификатор";
+            }
+        }
+
+        private void PasswordTextBox_Leave(object sender, EventArgs e)
+        {
+            if (PasswordTextBox.Text == null)
+            {
+                PasswordTextBox.Text = "Пароль";
+            }
+        }
     }
 }

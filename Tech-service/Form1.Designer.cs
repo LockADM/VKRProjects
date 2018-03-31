@@ -42,6 +42,8 @@
             this.спискиЗаказовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zakazBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.zakazBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.techDS = new Tech_service.TechDS();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -54,6 +56,12 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.ZakazDGV = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ClientBS = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CompBttn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -74,6 +82,9 @@
             this.IDZakazaSearchTextBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rabotaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.VidRabBS = new System.Windows.Forms.BindingSource(this.components);
             this.rabotaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.VersionLable = new System.Windows.Forms.ToolStripStatusLabel();
@@ -81,26 +92,20 @@
             this.CommentLable = new System.Windows.Forms.ToolStripStatusLabel();
             this.TimeLable = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.VidRabBS = new System.Windows.Forms.BindingSource(this.components);
-            this.techDS = new Tech_service.TechDS();
-            this.zakazBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ClientBS = new System.Windows.Forms.BindingSource(this.components);
             this.zakazTableAdapter = new Tech_service.TechDSTableAdapters.ZakazTableAdapter();
             this.clientyTableAdapter = new Tech_service.TechDSTableAdapters.ClientyTableAdapter();
             this.rabotaTableAdapter = new Tech_service.TechDSTableAdapters.RabotaTableAdapter();
             this.vid_RabTableAdapter = new Tech_service.TechDSTableAdapters.Vid_RabTableAdapter();
             this.tableAdapterManager = new Tech_service.TechDSTableAdapters.TableAdapterManager();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.StatusBttn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zakazBindingNavigator)).BeginInit();
             this.zakazBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zakazBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.techDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ZakazDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientBS)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -110,12 +115,10 @@
             this.groupBox6.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rabotaDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VidRabBS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rabotaBindingSource)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VidRabBS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.techDS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zakazBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ClientBS)).BeginInit();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -246,6 +249,16 @@
             this.zakazBindingNavigator.TabIndex = 1;
             this.zakazBindingNavigator.Text = "bindingNavigator1";
             // 
+            // zakazBindingSource
+            // 
+            this.zakazBindingSource.DataMember = "Zakaz";
+            this.zakazBindingSource.DataSource = this.techDS;
+            // 
+            // techDS
+            // 
+            this.techDS.DataSetName = "TechDS";
+            this.techDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
@@ -350,6 +363,58 @@
             this.ZakazDGV.Size = new System.Drawing.Size(688, 202);
             this.ZakazDGV.TabIndex = 2;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_Zakaza";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Номер заказа";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Client";
+            this.dataGridViewTextBoxColumn2.DataSource = this.ClientBS;
+            this.dataGridViewTextBoxColumn2.DisplayMember = "FIO";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Клиент";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn2.ValueMember = "ID_Client";
+            // 
+            // ClientBS
+            // 
+            this.ClientBS.DataMember = "Clienty";
+            this.ClientBS.DataSource = this.techDS;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Data_Zakaza";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Дата заказа";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.ToolTipText = "DD.MM.YYYY HH.mm.ss";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Itogo";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Итоговая сумма";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Status";
+            this.dataGridViewCheckBoxColumn1.FalseValue = "False";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Статус";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.TrueValue = "True";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.CompBttn);
@@ -441,6 +506,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.groupBox9);
             this.groupBox4.Controls.Add(this.groupBox8);
             this.groupBox4.Controls.Add(this.groupBox7);
             this.groupBox4.Controls.Add(this.groupBox6);
@@ -560,6 +626,30 @@
             this.rabotaDataGridView.Size = new System.Drawing.Size(340, 182);
             this.rabotaDataGridView.TabIndex = 5;
             // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ID_Zakaza";
+            this.dataGridViewTextBoxColumn5.HeaderText = "ID_Zakaza";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Vid_Raboty";
+            this.dataGridViewTextBoxColumn6.DataSource = this.VidRabBS;
+            this.dataGridViewTextBoxColumn6.DisplayMember = "Vid_Rabot";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Вид Работы";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn6.ValueMember = "Vid_Rabot";
+            // 
+            // VidRabBS
+            // 
+            this.VidRabBS.DataMember = "Vid_Rab";
+            this.VidRabBS.DataSource = this.techDS;
+            // 
             // rabotaBindingSource
             // 
             this.rabotaBindingSource.DataMember = "FK_Rabota_Zakaz";
@@ -609,45 +699,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "ID_Zakaza";
-            this.dataGridViewTextBoxColumn5.HeaderText = "ID_Zakaza";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Vid_Raboty";
-            this.dataGridViewTextBoxColumn6.DataSource = this.VidRabBS;
-            this.dataGridViewTextBoxColumn6.DisplayMember = "Vid_Rabot";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Вид Работы";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn6.ValueMember = "Vid_Rabot";
-            // 
-            // VidRabBS
-            // 
-            this.VidRabBS.DataMember = "Vid_Rab";
-            this.VidRabBS.DataSource = this.techDS;
-            // 
-            // techDS
-            // 
-            this.techDS.DataSetName = "TechDS";
-            this.techDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // zakazBindingSource
-            // 
-            this.zakazBindingSource.DataMember = "Zakaz";
-            this.zakazBindingSource.DataSource = this.techDS;
-            // 
-            // ClientBS
-            // 
-            this.ClientBS.DataMember = "Clienty";
-            this.ClientBS.DataSource = this.techDS;
-            // 
             // zakazTableAdapter
             // 
             this.zakazTableAdapter.ClearBeforeFill = true;
@@ -674,52 +725,25 @@
             this.tableAdapterManager.Vid_RabTableAdapter = this.vid_RabTableAdapter;
             this.tableAdapterManager.ZakazTableAdapter = this.zakazTableAdapter;
             // 
-            // dataGridViewTextBoxColumn1
+            // groupBox9
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_Zakaza";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Номер заказа";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.groupBox9.Controls.Add(this.StatusBttn);
+            this.groupBox9.Location = new System.Drawing.Point(143, 19);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(181, 50);
+            this.groupBox9.TabIndex = 6;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Пометить заказ как готовый";
             // 
-            // dataGridViewTextBoxColumn2
+            // StatusBttn
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Client";
-            this.dataGridViewTextBoxColumn2.DataSource = this.ClientBS;
-            this.dataGridViewTextBoxColumn2.DisplayMember = "FIO";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Клиент";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn2.ValueMember = "ID_Client";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Data_Zakaza";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Дата заказа";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.ToolTipText = "DD.MM.YYYY HH.mm.ss";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Itogo";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Итоговая сумма";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Status";
-            this.dataGridViewCheckBoxColumn1.FalseValue = "False";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Статус";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
-            this.dataGridViewCheckBoxColumn1.TrueValue = "True";
+            this.StatusBttn.Image = ((System.Drawing.Image)(resources.GetObject("StatusBttn.Image")));
+            this.StatusBttn.Location = new System.Drawing.Point(45, 21);
+            this.StatusBttn.Name = "StatusBttn";
+            this.StatusBttn.Size = new System.Drawing.Size(82, 23);
+            this.StatusBttn.TabIndex = 5;
+            this.StatusBttn.UseVisualStyleBackColor = true;
+            this.StatusBttn.Click += new System.EventHandler(this.StatusBttn_Click);
             // 
             // Form1
             // 
@@ -744,7 +768,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.zakazBindingNavigator)).EndInit();
             this.zakazBindingNavigator.ResumeLayout(false);
             this.zakazBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zakazBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.techDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ZakazDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientBS)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -756,13 +783,11 @@
             this.groupBox6.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rabotaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VidRabBS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rabotaBindingSource)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VidRabBS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.techDS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zakazBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ClientBS)).EndInit();
+            this.groupBox9.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -837,6 +862,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Button StatusBttn;
     }
 }
 

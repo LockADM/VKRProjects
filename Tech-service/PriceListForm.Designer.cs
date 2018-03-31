@@ -107,7 +107,7 @@
             this.vid_RabBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.vid_RabBindingNavigator.Name = "vid_RabBindingNavigator";
             this.vid_RabBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.vid_RabBindingNavigator.Size = new System.Drawing.Size(459, 25);
+            this.vid_RabBindingNavigator.Size = new System.Drawing.Size(612, 25);
             this.vid_RabBindingNavigator.TabIndex = 0;
             this.vid_RabBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -155,7 +155,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
@@ -214,9 +214,10 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.vid_RabDataGridView.DataSource = this.vid_RabBindingSource;
-            this.vid_RabDataGridView.Location = new System.Drawing.Point(12, 28);
+            this.vid_RabDataGridView.Location = new System.Drawing.Point(16, 37);
+            this.vid_RabDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.vid_RabDataGridView.Name = "vid_RabDataGridView";
-            this.vid_RabDataGridView.Size = new System.Drawing.Size(429, 220);
+            this.vid_RabDataGridView.Size = new System.Drawing.Size(572, 288);
             this.vid_RabDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -235,13 +236,15 @@
             // 
             // PriceListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 265);
+            this.ClientSize = new System.Drawing.Size(612, 347);
             this.Controls.Add(this.vid_RabDataGridView);
             this.Controls.Add(this.vid_RabBindingNavigator);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "PriceListForm";
             this.Text = "Виды работ";
