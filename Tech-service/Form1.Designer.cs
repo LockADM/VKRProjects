@@ -71,6 +71,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.CostButton = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.StatusBttn = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.SearchButtonBool2 = new System.Windows.Forms.Button();
             this.SearchButtonBool1 = new System.Windows.Forms.Button();
@@ -97,8 +99,7 @@
             this.rabotaTableAdapter = new Tech_service.TechDSTableAdapters.RabotaTableAdapter();
             this.vid_RabTableAdapter = new Tech_service.TechDSTableAdapters.Vid_RabTableAdapter();
             this.tableAdapterManager = new Tech_service.TechDSTableAdapters.TableAdapterManager();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.StatusBttn = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zakazBindingNavigator)).BeginInit();
             this.zakazBindingNavigator.SuspendLayout();
@@ -110,6 +111,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -118,7 +120,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.VidRabBS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rabotaBindingSource)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -218,6 +219,7 @@
             this.помощьToolStripMenuItem.Name = "помощьToolStripMenuItem";
             this.помощьToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.помощьToolStripMenuItem.Text = "Помощь";
+            this.помощьToolStripMenuItem.Click += new System.EventHandler(this.помощьToolStripMenuItem_Click_1);
             // 
             // zakazBindingNavigator
             // 
@@ -517,6 +519,26 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Поиск и фильтры";
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.StatusBttn);
+            this.groupBox9.Location = new System.Drawing.Point(143, 19);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(181, 50);
+            this.groupBox9.TabIndex = 6;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Пометить заказ как готовый";
+            // 
+            // StatusBttn
+            // 
+            this.StatusBttn.Image = ((System.Drawing.Image)(resources.GetObject("StatusBttn.Image")));
+            this.StatusBttn.Location = new System.Drawing.Point(45, 21);
+            this.StatusBttn.Name = "StatusBttn";
+            this.StatusBttn.Size = new System.Drawing.Size(82, 23);
+            this.StatusBttn.TabIndex = 5;
+            this.StatusBttn.UseVisualStyleBackColor = true;
+            this.StatusBttn.Click += new System.EventHandler(this.StatusBttn_Click);
+            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.SearchButtonBool2);
@@ -725,25 +747,9 @@
             this.tableAdapterManager.Vid_RabTableAdapter = this.vid_RabTableAdapter;
             this.tableAdapterManager.ZakazTableAdapter = this.zakazTableAdapter;
             // 
-            // groupBox9
+            // helpProvider1
             // 
-            this.groupBox9.Controls.Add(this.StatusBttn);
-            this.groupBox9.Location = new System.Drawing.Point(143, 19);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(181, 50);
-            this.groupBox9.TabIndex = 6;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Пометить заказ как готовый";
-            // 
-            // StatusBttn
-            // 
-            this.StatusBttn.Image = ((System.Drawing.Image)(resources.GetObject("StatusBttn.Image")));
-            this.StatusBttn.Location = new System.Drawing.Point(45, 21);
-            this.StatusBttn.Name = "StatusBttn";
-            this.StatusBttn.Size = new System.Drawing.Size(82, 23);
-            this.StatusBttn.TabIndex = 5;
-            this.StatusBttn.UseVisualStyleBackColor = true;
-            this.StatusBttn.Click += new System.EventHandler(this.StatusBttn_Click);
+            this.helpProvider1.HelpNamespace = "D:\\ProjectFoSell\\Tech-service\\Tech-service\\Properties\\helpForProject.chm";
             // 
             // Form1
             // 
@@ -777,6 +783,7 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
@@ -787,7 +794,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.rabotaBindingSource)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -864,6 +870,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Button StatusBttn;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
 

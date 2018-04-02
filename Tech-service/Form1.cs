@@ -248,6 +248,18 @@ namespace Tech_service
             ZakazDGV.CurrentRow.Cells[4].Value = true;
             zakazBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(techDS);
+
+        }
+
+        private void помощьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void помощьToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, @"helpForProject.chm", HelpNavigator.TableOfContents);
         }
     }
 }

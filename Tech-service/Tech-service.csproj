@@ -180,6 +180,9 @@
     <EmbeddedResource Include="RegistrUserForm.resx">
       <DependentUpon>RegistrUserForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="helpForProject.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
