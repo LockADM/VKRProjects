@@ -45,6 +45,7 @@ namespace Tech_service
             this.Validate();
             this.tableAdapterManager.UpdateAll(this.techDS);
             this.Close();
+
         }
     }
 }
