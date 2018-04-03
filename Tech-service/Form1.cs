@@ -250,16 +250,9 @@ namespace Tech_service
             this.tableAdapterManager.UpdateAll(techDS);
 
         }
-
-        private void помощьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-
-        }
-
         private void помощьToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Help.ShowHelp(this, @"helpForProject.chm", HelpNavigator.TableOfContents);
+            Help.ShowHelp(this, @"Приоритет.chm", HelpNavigator.TableOfContents);
         }
     }
 }

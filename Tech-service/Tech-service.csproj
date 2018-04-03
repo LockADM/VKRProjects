@@ -180,9 +180,6 @@
     <EmbeddedResource Include="RegistrUserForm.resx">
       <DependentUpon>RegistrUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="helpForProject.chm">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -204,6 +201,9 @@
     <None Include="TechDS.xss">
       <DependentUpon>TechDS.xsd</DependentUpon>
     </None>
+    <EmbeddedResource Include="Приоритет.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
