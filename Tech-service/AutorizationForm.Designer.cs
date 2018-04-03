@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AutorizationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.EntrBttn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.AutorizationBS = new System.Windows.Forms.BindingSource(this.components);
             this.techDS = new Tech_service.TechDS();
             this.autorizationTableTableAdapter = new Tech_service.TechDSTableAdapters.AutorizationTableTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AutorizationBS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.techDS)).BeginInit();
@@ -59,6 +59,16 @@
             this.groupBox1.Size = new System.Drawing.Size(230, 233);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label1.Location = new System.Drawing.Point(50, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 24);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Авторизация";
             // 
             // linkLabel1
             // 
@@ -93,26 +103,24 @@
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.PasswordTextBox.Location = new System.Drawing.Point(9, 114);
             this.PasswordTextBox.Multiline = true;
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(207, 33);
             this.PasswordTextBox.TabIndex = 1;
-            this.PasswordTextBox.Text = "пароль";
+            this.PasswordTextBox.Text = "Пароль";
             this.PasswordTextBox.Click += new System.EventHandler(this.PasswordTextBox_Click);
             this.PasswordTextBox.Leave += new System.EventHandler(this.PasswordTextBox_Leave);
             // 
             // LoginTextBox
             // 
-            this.LoginTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.LoginTextBox.Location = new System.Drawing.Point(9, 64);
             this.LoginTextBox.Multiline = true;
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.Size = new System.Drawing.Size(207, 33);
             this.LoginTextBox.TabIndex = 0;
-            this.LoginTextBox.Text = "идентификатор";
+            this.LoginTextBox.Text = "Идентификатор";
             this.LoginTextBox.Click += new System.EventHandler(this.LoginTextBox_Click);
             this.LoginTextBox.Leave += new System.EventHandler(this.LoginTextBox_Leave);
             // 
@@ -129,16 +137,6 @@
             // autorizationTableTableAdapter
             // 
             this.autorizationTableTableAdapter.ClearBeforeFill = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label1.Location = new System.Drawing.Point(50, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 24);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Авторизация";
             // 
             // AutorizationForm
             // 
